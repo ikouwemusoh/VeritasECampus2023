@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<h1>
+			View All Users
+		</h1>
+		<button><a href="/users/new">Enter a new user</a></button>
+		<table border="1px solid black">
+			<tr>
+				<th>S/N</th>
+				<th>User ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Phone</th>
+				<th>Date Registered</th>
+				<th>Gender</th>
+				<th>User Type</th>
+				<th>View All Details</th>
+			</tr>
+			<tr th:each="user:${users}">
+				<td th:text="${user.id}"></td>
+				<td th:text="${user.id}"></td>
+				<td th:text="${user.fname}"></td>
+				<td th:text="${user.lname}"></td>
+				<td th:text="${user.phone}"></td>
+				<td th:text="${user.createdDate}"></td>
+				<td th:text="${user.gender}"></td>
+				<td th:text="${user.user_type}"></td>
+				<td><a href="#">View Details</a></td>
+			</tr>
+		</table>
+	</body>
+</html>
